@@ -1,0 +1,171 @@
+body {
+  background-color: #2C3E50;
+  font-family: 'Lato';
+}
+
+#center {
+  margin-left: 25%;
+  margin-top: 200px;
+  width: 50%;
+  background-color: #ECF0F1;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+#box {
+  height: 100px;
+  width: 100px;
+  background: #E74C3C;
+}
+
+button {
+  margin-top: 30px;
+  padding: 10px;
+  font-size: 15px;  
+  background-color: #ECF0F1;
+  border: #2980B9 2px solid;
+  color: #2980B9;
+  cursor: pointer;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 2px 4px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.button {
+  transition: 1s;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+}
+
+.button:hover {
+  background-color: #2980B9;
+  color: #ECF0F1;
+  transform: scale(1.07);
+
+}
+
+.button-stop {
+  background-color: #E74C3C;
+  border: #E74C3C 2px solid;
+  color: #ECF0F1;
+  transition: 1s;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+
+}
+
+.button-stop:hover {
+  background-color: #E74C3C;
+  color: #ECF0F1;
+  transform: scale(1.07);
+}
+
+.ball-roll {
+  animation: roll-animation 5s infinite;
+}
+
+.shrink {
+  animation: shrink 5s infinite;
+}
+
+.pulse {
+  animation: pulse 0.5s infinite;
+}
+
+.grow {
+  animation: grow 3s infinite;
+}
+
+.rotate {
+  animation: rotate 5s infinite; 
+}
+
+.color {
+  animation: color 3s infinite;
+}
+
+@keyframes roll-animation {
+  25% {
+    border-radius: 50%;
+    transform: translateX(0px);
+  }
+
+  75% {
+    border-radius: 50%;
+    transform: translateX(500px);
+  }
+}
+
+@keyframes shrink {
+  25% {
+    border-radius: 50%;
+    transform: scale(1);
+  }
+
+  50% {
+    border-radius: 50%;
+    transform: scale(0);
+  }
+
+  75% {
+    border-radius: 50%;
+    transform: scale(1);
+
+  }
+
+  100% {
+    border-radius: 0%;
+
+  }
+}
+
+@keyframes pulse {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+
+
+}
+
+@keyframes grow {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+  
+}
+
+@keyframes rotate {
+  from { 
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes color {
+  0% {
+    background-color: #E74C3C;
+  }
+
+  50% {
+    background-color: #3498DB;
+  }
+  100% {
+    background-color: #E74C3C;
+  }
+}
